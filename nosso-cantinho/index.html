@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nosso-amor</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html"><strong>início</strong></a></li>
+          <li><a href="#tempo"><strong> nosso tempo </strong></a></li>
+          <li><a href="#encantos"><strong>seus-encantos</strong></a></li>
+          <li>
+            <a href="/"><img class="logo" src="imagens/iconSelo.png" alt="" /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <menu>
+
+        <section class="imagens">
+            <h1>Felipe ❤️ Emilly </h1>
+            <br>
+            <h3>meu amor por você em forma de website!</h3>
+            <div class="container-imagens">
+               <div class="imagens">
+                <img src="imagens/Captura de tela 2025-11-26 214129.png" alt="">
+                <img class="img-meio" src="imagens/amor005.jpg" alt="">
+                <img src="imagens/amor003.jpg" alt="">
+                
+
+                </div>
+            </div>
+        </section>
+
+
+
+      <div class="div-banner">
+        <h1>Te amo, Emilly</h1>
+        <div class="paragrafo">
+
+        <p>
+          Desde que você chegou, a vida não tem pausa,
+           Sinto a paz que acalma qualquer pequena causa, 
+           E até seu jeito de mandar me faz sentir em casa.
+            <br>
+            <br>
+           Você é a força que eu não sabia que precisava,
+            Meu mundo virou poesia com a sua alma brava,
+             O amor mais lindo que o meu peito já abraçava.
+        </p>
+         </div>
+      </div>
+
+      <section class="contador-tempo" id="tempo">
+
+       <h1 class="titulo-tempo">Nosso tempo juntos</h1>
+
+        <div class="tempo-juntos-container">
+            
+             
+             <div id="contador">carregando...</div>
+
+        </div>
+
+      </section>
+
+      <section class="seus-encantos" id="encantos">
+        
+        <div class="cards">
+            <img src="imagens/love-6713977_1280.jpg" alt="">
+            <h3>seu sorriso 😁</h3>
+            <p>seu sorriso é como colírio para os meus olhos, adoro ver voce sorrir para mim, SUA LINDA!</p>
+        </div>
+
+         
+        <div class="cards">
+            <img src="imagens/love-6713977_1280.jpg" alt="">
+            <h3>seu jeito fofo 🥰</h3>
+            <p>Amo quando tu você age igual uma criança comigo, quase morro de tanta fofura</p>
+        </div>
+
+         
+        <div class="cards">
+            <img src="imagens/love-6713977_1280.jpg" alt="">
+            <h3>seus olhos 🥺</h3>
+            <p>Quando você me olha com esses olhinhos brilhantes, eu me derreto todo</p>
+        </div>
+
+          <div class="cards">
+            <img src="imagens/love-6713977_1280.jpg" alt="">
+            <h3>sua vontade de crescer 🤩</h3>
+            <p>Apesar de tantos problemas, você sempre me mostra a sua vontade de crescer junto comigo, eu adimiro muito isso em você</p>
+        </div>
+
+          <div class="cards">
+            <img src="imagens/love-6713977_1280.jpg" alt="">
+            <h3>seu amor por mim 😘</h3>
+            <p>eu admiro e reconheço cada demonstraçao sua de amor</p>
+        </div>
+
+      </section>
+
+      <section class="nossa-musica">
+        <h1>Nossa Música</h1>
+        <iframe  src="https://open.spotify.com/embed/track/4AE7Lj39VnSZNOmGH2iZaq?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
+        <p>sempre que toca essa música, eu me lembro de você 💕</p>
+      </section>
+
+      <section class="recado-final">
+    <h1>Um Presente Meu para Você</h2>
+    <p>Emilly, este site é apenas uma pequena demonstração de tudo que sinto. É uma caixinha de lembranças onde guardo o nosso tempo, seus encantos e a linha da nossa história. Obrigado por me fazer o homem mais feliz do mundo!</p>
+    <p class="assinatura-final">Com todo o meu amor, <br> Lipe.</p>
+
+</section>
+    </menu>
+
+    <footer>
+      <p>&copy; 2025 Nosso Amor. Criado com Carinho por Felipe.</p>
+    </footer>
+
+
+    <script>
+
+// ==========================================================
+// 🔴 PASSO 1: INSIRA A DATA EM QUE VOCÊS SE CONHECERAM
+// Exemplo: 1º de Janeiro de 2024 às 14:30:00
+// Mês começa em 01 (Janeiro)
+// ==========================================================
+const DATA_INICIO = new Date("2025-02-21 18:30:00"); 
+
+// Transforma a data em milissegundos para facilitar os cálculos
+const dataInicioMS = DATA_INICIO.getTime(); 
+
+// As constantes para facilitar os cálculos de conversão
+const MS_POR_SEGUNDO = 1000;
+const MS_POR_MINUTO = MS_POR_SEGUNDO * 60;
+const MS_POR_HORA = MS_POR_MINUTO * 60;
+const MS_POR_DIA = MS_POR_HORA * 24;
+// Os meses e anos são aproximações (média de 30.44 dias/mês) 
+// pois o número exato de dias varia (28, 29, 30, 31).
+const MS_POR_MES_APROXIMADO = MS_POR_DIA * 30.44; 
+const MS_POR_ANO_APROXIMADO = MS_POR_DIA * 365.25; 
+
+
+function atualizarContador() {
+    // Pega o tempo atual em milissegundos
+    const agoraMS = new Date().getTime();
+    
+    // Calcula a diferença total em milissegundos
+    let diferenca = agoraMS - dataInicioMS; 
+    
+    // Verifica se a data é válida e se a diferença é positiva
+    if (isNaN(diferenca) || diferenca < 0) {
+        document.getElementById('contador').innerHTML = 'Data de início inválida. Verifique o formato.';
+        return;
+    }
+
+    // --- CÁLCULOS DO TEMPO DECORRIDO ---
+    
+    // 1. Anos
+    const anos = Math.floor(diferenca / MS_POR_ANO_APROXIMADO);
+    // Pega o que sobrou (o resto)
+    diferenca %= MS_POR_ANO_APROXIMADO; 
+    
+    // 2. Meses
+    const meses = Math.floor(diferenca / MS_POR_MES_APROXIMADO);
+    diferenca %= MS_POR_MES_APROXIMADO;
+    
+    // 3. Dias
+    const dias = Math.floor(diferenca / MS_POR_DIA);
+    diferenca %= MS_POR_DIA;
+    
+    // 4. Horas
+    const horas = Math.floor(diferenca / MS_POR_HORA);
+    diferenca %= MS_POR_HORA;
+    
+    // 5. Minutos
+    const minutos = Math.floor(diferenca / MS_POR_MINUTO);
+    diferenca %= MS_POR_MINUTO;
+    
+    // 6. Segundos
+    const segundos = Math.floor(diferenca / MS_POR_SEGUNDO);
+    
+    // --- EXIBIÇÃO DO RESULTADO ---
+    
+    // Monta a string de resultado, adicionando "s" no plural e removendo zeros se necessário
+   // Dentro da sua função 'atualizarContador' na tag <script>
+
+// --- EXIBIÇÃO DO RESULTADO ---
+    
+// Monta a string de resultado, adicionando "s" no plural e removendo zeros se necessário
+const resultado = `
+    <span class="tempo-principal">${anos} ano${anos !== 1 ? 's' : ''} </span>
+    <span class="tempo-principal">${meses} mese${meses !== 1 ? 's' : ''}</span>
+    <span class="tempo-principal">${dias} dia${dias !== 1 ? 's' : ''}</span>
+    <br>
+    <span class="tempo-principal">${horas}  hora${horas !== 1 ? 's' : ''}</span>
+    <span class="tempo-detalhe">${minutos} minuto${minutos !== 1 ? 's' : ''}</span>
+    <span class="tempo-detalhe">${segundos} segundo${segundos !== 1 ? 's' : ''}</span>
+`;
+
+document.getElementById('contador').innerHTML = resultado;
+    
+    document.getElementById('contador').innerHTML = resultado;
+}
+
+// Chama a função imediatamente para evitar o "Carregando..."
+atualizarContador();
+
+// Define um intervalo para chamar a função a cada 1000ms (1 segundo)
+setInterval(atualizarContador, 1000);
+    </script>
+
+  </body>
+</html>
